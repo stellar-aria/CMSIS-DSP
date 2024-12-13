@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.14)
+cmake_minimum_required(VERSION 3.14)
 cmake_policy(SET CMP0077 NEW)
 project(CMSISDSP)
 
@@ -26,7 +26,6 @@ option(NEON_RIFFT_SCALING "Scaling of RIFFT with Neon" ON)
 # CMSIS DSP
 #
 ###########################
-
 add_library(CMSISDSP STATIC)
 
 add_subdirectory(BasicMathFunctions)
@@ -48,8 +47,9 @@ add_subdirectory(WindowFunctions)
 
 ### Includes
 target_include_directories(CMSISDSP PUBLIC "${DSP}/Include")
-if (DEFINED CMSISCORE)
-target_include_directories(CMSISDSP PUBLIC "${CMSISCORE}/Include")
+
+if(DEFINED CMSISCORE)
+  target_include_directories(CMSISDSP PUBLIC "${CMSISCORE}/Include")
 endif()
 
 include(configDsp.cmake)
