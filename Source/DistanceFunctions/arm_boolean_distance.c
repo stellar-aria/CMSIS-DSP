@@ -42,39 +42,39 @@
 
 
 #define TT
-#define TF 
+#define TF
 #define FT
 #define EXT _TT_TF_FT
-#include "arm_boolean_distance_template.h"
+#include "Include/arm_boolean_distance_template.h"
 
 #undef TT
 #undef FF
 #undef TF
-#undef FT 
+#undef FT
 #undef EXT
-#define TF 
+#define TF
 #define FT
 #define EXT _TF_FT
-#include "arm_boolean_distance_template.h"
+#include "Include/arm_boolean_distance_template.h"
 
 #undef TT
 #undef FF
 #undef TF
-#undef FT 
+#undef FT
 #undef EXT
 #define TT
 #define FF
-#define TF 
+#define TF
 #define FT
 #define EXT _TT_FF_TF_FT
-#include "arm_boolean_distance_template.h"
+#include "Include/arm_boolean_distance_template.h"
 
 #undef TT
 #undef FF
 #undef TF
-#undef FT 
+#undef FT
 #undef EXT
 #define TT
 #define EXT _TT
-#include "arm_boolean_distance_template.h"
+#include "Include/arm_boolean_distance_template.h"
 
