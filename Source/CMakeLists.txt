@@ -29,37 +29,22 @@ option(NEON_RIFFT_SCALING "Scaling of RIFFT with Neon" ON)
 
 add_library(CMSISDSP STATIC)
 
-include(BasicMathFunctions/Config.cmake)
-
-include(ComplexMathFunctions/Config.cmake)
-
-include(QuaternionMathFunctions/Config.cmake)
-
-include(ControllerFunctions/Config.cmake)
- 
-include(FastMathFunctions/Config.cmake)
- 
-include(FilteringFunctions/Config.cmake)
- 
-include(MatrixFunctions/Config.cmake)
-
-include(StatisticsFunctions/Config.cmake)
-
-include(SupportFunctions/Config.cmake)
-
-include(TransformFunctions/Config.cmake)
- 
-include(CommonTables/Config.cmake)
-  
-include(SVMFunctions/Config.cmake)
-
-include(BayesFunctions/Config.cmake)
-
-include(DistanceFunctions/Config.cmake)
-
-include(InterpolationFunctions/Config.cmake)
-
-include(WindowFunctions/Config.cmake)
+add_subdirectory(BasicMathFunctions)
+add_subdirectory(ComplexMathFunctions)
+add_subdirectory(QuaternionMathFunctions)
+add_subdirectory(ControllerFunctions)
+add_subdirectory(FastMathFunctions)
+add_subdirectory(FilteringFunctions)
+add_subdirectory(MatrixFunctions)
+add_subdirectory(StatisticsFunctions)
+add_subdirectory(SupportFunctions)
+add_subdirectory(TransformFunctions)
+add_subdirectory(CommonTables)
+add_subdirectory(SVMFunctions)
+add_subdirectory(BayesFunctions)
+add_subdirectory(DistanceFunctions)
+add_subdirectory(InterpolationFunctions)
+add_subdirectory(WindowFunctions)
 
 ### Includes
 target_include_directories(CMSISDSP PUBLIC "${DSP}/Include")
